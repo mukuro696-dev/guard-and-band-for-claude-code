@@ -13,7 +13,7 @@ guard-a と progress-band（このリポジトリの 2 つの mod）。
 
 ## サプライチェーン / Supply chain
 - 導入前に取得したフォルダで `claude plugin validate <dir>` を実行し、`hooks:` と `calls:` を確認してください（この mod は `$.process`・`$.fs.write`・`$.http` を呼びません）。
-- `/plugin marketplace add mukuro696-dev/progress-append-mods#<tag>` のようにタグ（`#ref`）を固定することを推奨します。
+- `/plugin marketplace add mukuro696-dev/guard-and-band-for-claude-code#<tag>` のようにタグ（`#ref`）を固定することを推奨します。
 - リリースのタグと同梱の `CHECKSUMS.sha256`（全ファイルの SHA-256 一覧）を照合できます（例: `shasum -a 256 -c CHECKSUMS.sha256`）。署名は付けていません。
 
 ## English summary

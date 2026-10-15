@@ -25,8 +25,8 @@ mod は利用者の権限で動きます。`claude plugin validate ./progress-ba
 
 ## 導入と撤去
 ```
-/plugin install progress-band@progress-append-mods
-/plugin uninstall progress-band@progress-append-mods
+/plugin install progress-band@guard-and-band-for-claude-code
+/plugin uninstall progress-band@guard-and-band-for-claude-code
 ```
 単独で完結します（他の mod に依存しません）。
 

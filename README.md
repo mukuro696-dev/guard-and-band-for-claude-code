@@ -1,4 +1,4 @@
-# progress-append-mods
+# guard-and-band-for-claude-code
 
 日本語 / [English](#english)
 
@@ -15,9 +15,9 @@ Claude Code 用の小さな自作 mod（プラグイン）集です。
 ## 導入
 リポジトリのルートに `.claude-plugin/marketplace.json` があります。
 ```
-/plugin marketplace add mukuro696-dev/progress-append-mods
-/plugin install progress-band@progress-append-mods
-/plugin install guard-a@progress-append-mods
+/plugin marketplace add mukuro696-dev/guard-and-band-for-claude-code
+/plugin install progress-band@guard-and-band-for-claude-code
+/plugin install guard-a@guard-and-band-for-claude-code
 ```
 `owner/repo` の後ろに `#ref` を付けてタグ等に固定することもできます。ローカルで試す場合: `claude plugin marketplace add <このリポジトリのパス>`。
 
@@ -61,7 +61,7 @@ mod は**あなたの権限で動き**、ファイル・プロセス・ネット
 
 優先順位は local > project > user です。ターミナル・Desktop のローカルセッション・VS Code 拡張は同じ settings を読むので、user で入れれば他でも有効です。クラウドセッションはローカルの設定を読みません。
 
-- **guard-a**: local scope を推奨します（`claude plugin install guard-a@progress-append-mods --scope local`）。公式の仕様説明に基づく推奨で、作者の環境では guard-a を local で常用して確認済みです。誤止めが多いと感じたら、そのプロジェクトで撤去してください。
+- **guard-a**: local scope を推奨します（`claude plugin install guard-a@guard-and-band-for-claude-code --scope local`）。公式の仕様説明に基づく推奨で、作者の環境では guard-a を local で常用して確認済みです。誤止めが多いと感じたら、そのプロジェクトで撤去してください。
 - **progress-band**: user scope を推奨します（全プロジェクトで文脈使用量が見えます）。公式の仕様説明に基づく推奨で、user scope での動作は未検証です。
 
 ### 3. progress-band の表示
@@ -72,9 +72,9 @@ Task 系ツール（TaskCreate/TaskUpdate・TodoWrite・update_plan）を使わ�
 
 ### 5. 撤去と調査
 ```
-/plugin uninstall guard-a@progress-append-mods
-/plugin uninstall progress-band@progress-append-mods
-/plugin marketplace remove progress-append-mods
+/plugin uninstall guard-a@guard-and-band-for-claude-code
+/plugin uninstall progress-band@guard-and-band-for-claude-code
+/plugin marketplace remove guard-and-band-for-claude-code
 ```
 問題が出た時は、Claude Code のデバッグ機能（`claude --debug`）の利用をまず検討してください（出力内容は未確認です）。
 
@@ -110,7 +110,7 @@ Small, self-made Claude Code mods (plugins).
 
 Requires Claude Code 2.1.287 or later (the official pages differ by one on the Desktop number; this repo assumes 2.1.287+). Per-mod READMEs are in Japanese.
 
-Install: `/plugin marketplace add mukuro696-dev/progress-append-mods`, then `/plugin install progress-band@progress-append-mods`.
-Recommended: keep guard-a as a helper and protect critical operations with `permissions.deny` (e.g. `Bash(git push --force *)`; Bash rules are prefix matches, so variants like `git -C . push` are not matched, and a sandbox is the firm boundary); install guard-a at local scope and progress-band at user scope. Mods run with your permissions and are outside the sandbox: inspect `hooks:`/`calls:` with `claude plugin validate <dir>` before installing (neither mod calls `$.process`, `$.fs.write` or `$.http`). Uninstall: `/plugin uninstall progress-band@progress-append-mods`.
+Install: `/plugin marketplace add mukuro696-dev/guard-and-band-for-claude-code`, then `/plugin install progress-band@guard-and-band-for-claude-code`.
+Recommended: keep guard-a as a helper and protect critical operations with `permissions.deny` (e.g. `Bash(git push --force *)`; Bash rules are prefix matches, so variants like `git -C . push` are not matched, and a sandbox is the firm boundary); install guard-a at local scope and progress-band at user scope. Mods run with your permissions and are outside the sandbox: inspect `hooks:`/`calls:` with `claude plugin validate <dir>` before installing (neither mod calls `$.process`, `$.fs.write` or `$.http`). Uninstall: `/plugin uninstall progress-band@guard-and-band-for-claude-code`.
 Tests: `node guard-a/test/battery.mjs`, `node guard-a/test/mutate.mjs`, `claude plugin validate ./guard-a`, `claude plugin test ./progress-band`. Note: validate fails with a `claude` older than 2.1.287 on PATH; use the Desktop-bundled one.
 License: MIT. Provided as is, no warranty; unofficial.

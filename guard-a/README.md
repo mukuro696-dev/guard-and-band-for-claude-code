@@ -96,5 +96,5 @@ claude plugin validate ./guard-a
 
 ## インストール
 ```
-/plugin install guard-a@progress-append-mods
+/plugin install guard-a@guard-and-band-for-claude-code
 ```

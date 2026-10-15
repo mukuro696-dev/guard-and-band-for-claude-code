@@ -1,4 +1,4 @@
-progress-append-mods
+guard-and-band-for-claude-code
 
 guard-a: The overall structure (a function-hook plugin that intercepts Bash
 tool calls and asks for confirmation) was modeled on the official
