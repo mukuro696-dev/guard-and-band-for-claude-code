@@ -1,0 +1,18 @@
+progress-append-mods
+
+guard-a: The overall structure (a function-hook plugin that intercepts Bash
+tool calls and asks for confirmation) was modeled on the official
+"blast-radius" sample plugin distributed with Claude Code (Apache-2.0).
+The command classifier, the pending-confirmation mechanism and the test
+suites in this repository were written from scratch; no source text of the
+official sample is included. The official sample is not redistributed here.
+If you copy anything from the official sample into this repository,
+retain its Apache-2.0 license notice and mark the changes.
+
+progress-band: the way the UI band component and hooks are written (API usage) followed the official band.tsx example shown in the Claude Code plugin-authoring skill; the code itself is original.
+
+The test suites contain command strings that were proposed by independent
+reviewers (AI models) during review rounds; they are test inputs only.
+
+"Claude" and "Claude Code" are trademarks of Anthropic. This project is
+unofficial and not affiliated with or endorsed by Anthropic.

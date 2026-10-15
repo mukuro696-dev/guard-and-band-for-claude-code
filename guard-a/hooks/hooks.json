@@ -1,0 +1,6 @@
+{
+  "description": "guard-a: a tool.call (Bash) hook that statically classifies destructive / rollback shell commands and holds them behind a confirmation dialog.",
+  "modules": [
+    "./guard-a.mjs"
+  ]
+}

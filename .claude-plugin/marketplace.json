@@ -1,0 +1,21 @@
+{
+  "name": "progress-append-mods",
+  "owner": {
+    "name": "mukuro-696"
+  },
+  "metadata": {
+    "description": "Claude Code 用の自作 mod 集（決定的な判定・補助。防御ではない）"
+  },
+  "plugins": [
+    {
+      "name": "guard-a",
+      "source": "./guard-a",
+      "description": "削除・巻き戻しの影響範囲ガード（確認ダイアログ・補助であって防御でない）"
+    },
+    {
+      "name": "progress-band",
+      "source": "./progress-band",
+      "description": "タスク進捗（TaskCreate/Update・TodoWrite・update_plan）とコンテキスト使用量(%)をプロンプト上の帯に Claude 配色で表示（トークン非消費・fail-open・メインエージェントの呼び出しのみ数える）"
+    }
+  ]
+}

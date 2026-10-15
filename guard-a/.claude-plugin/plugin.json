@@ -1,0 +1,15 @@
+{
+  "name": "guard-a",
+  "version": "0.1.0",
+  "description": "削除・巻き戻しの影響範囲ガード: rm -rf・git reset --hard・force push・find -delete・rsync --delete・sh -c/eval/ssh の入れ子・rollback スクリプトなどを静的に判定して保留し、確認ダイアログで実行するか止めるかを聞く。画面が無い時は理由つきで止める。",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "mukuro-696"
+  },
+  "keywords": [
+    "mods",
+    "safety",
+    "git",
+    "rm"
+  ]
+}

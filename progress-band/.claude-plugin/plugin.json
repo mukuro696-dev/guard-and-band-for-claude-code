@@ -1,0 +1,8 @@
+{
+  "name": "progress-band",
+  "version": "0.1.0",
+  "description": "タスク進捗（TaskCreate/TaskUpdate/TodoWrite/update_plan）と文脈使用量を、プロンプト上の帯 1 行で持続表示する。決定的コードのみ・fail-open。",
+  "types": "./types/index.d.ts",
+  "author": { "name": "mukuro-696" },
+  "keywords": ["mods", "progress", "tasks", "context"]
+}
